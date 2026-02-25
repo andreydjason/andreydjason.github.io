@@ -265,6 +265,229 @@
     letter-spacing: 0.2em;
   }
   footer span { color: var(--accent); }
+  
+  /* ADDED AFTER 1.0 */
+  .container {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ── ICON ── */
+  .icon-wrap {
+    margin-bottom: 28px;
+  }
+
+  .icon-wrap svg {
+    width: 64px;
+    height: 64px;
+    filter: drop-shadow(0 0 18px var(--glow));
+  }
+
+  /* ── EYEBROW ── */
+  .eyebrow {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.35em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  
+  /* ── TITLE ── */
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    letter-spacing: 0.07em;
+    color: #fff;
+    line-height: 1;
+    text-shadow: 0 0 50px var(--glow);
+    margin-bottom: 4px;
+  }
+  h1 span { color: var(--accent); }
+
+  /* ── DIVIDER ── */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 20px auto;
+    width: 220px;
+  }
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+  }
+  .divider::before { background: linear-gradient(90deg, transparent, var(--accent)); }
+  .divider::after  { background: linear-gradient(90deg, var(--accent), transparent); }
+  .divider-icon { color: var(--accent); font-size: 0.9rem; }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    position: relative;
+    text-align: left;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(192,57,43,0.04);
+  }
+
+  .badge {
+    width: 34px;
+    height: 34px;
+    border-radius: 2px;
+    background: var(--accent);
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 0 14px var(--glow);
+  }
+
+  .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.05em;
+  }
+
+  .card-body {
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-body p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+
+  /* ── STEPS ── */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .step-num {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--accent);
+    background: rgba(192,57,43,0.12);
+    border: 1px solid rgba(192,57,43,0.2);
+    border-radius: 2px;
+    padding: 2px 7px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .step-text {
+    font-size: 0.87rem;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .step-text code {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 2px;
+    padding: 1px 6px;
+    color: var(--link);
+  }
+
+  /* ── LINK BUTTON ── */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    padding: 10px 20px;
+    background: rgba(192,57,43,0.1);
+    border: 1px solid rgba(192,57,43,0.3);
+    border-radius: 2px;
+    color: var(--link);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+  .btn:hover {
+    background: rgba(192,57,43,0.2);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .btn svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+
+  /* ── SEPARATOR ── */
+  .or-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 4px 0;
+  }
+  .or-row::before, .or-row::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .or-row span {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+  }
+
+  /* ── FOOTER NOTE ── */
+  .footer-note {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--muted);
+    letter-spacing: 0.15em;
+    margin-top: 24px;
+  }
+  .footer-note span { color: var(--accent); }
 </style>
 </head>
 <body>
@@ -276,6 +499,101 @@
   <h2>Mod List</h2>
   <h3>* Mods with the tag EFTX are included in EFTX pack *</h3>
 </header>
+
+<noscript>
+<div class="container">
+
+  <!-- Icon -->
+  <div class="icon-wrap">
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="32" r="30" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <path d="M20 24 L28 32 L20 40" stroke="#c0392b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M36 40 H44" stroke="#c0392b" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <p class="eyebrow">Attention — Needed Resourse</p>
+  <h1>Java<span>Script</span><br>Deactivated</h1>
+
+  <div class="divider"><span class="divider-icon">⚠</span></div>
+
+  <p style="font-size:0.9rem; color:var(--text); margin-bottom: 28px; letter-spacing:0.02em; line-height:1.6;">
+    This page uses JavaScript to render all its content.<br>
+	Without it, the list of mods cannot be displayed correctly.
+  </p>
+
+  <!-- CARD 1: Tutorial -->
+  <div class="card">
+    <div class="card-header">
+      <div class="badge">01</div>
+      <span class="card-title">How to Enable JavaScript</span>
+    </div>
+    <div class="card-body">
+      <p>Follow the steps below for your browser:</p>
+
+      <div class="steps">
+
+        <div class="step">
+          <span class="step-num">CHROME</span>
+          <span class="step-text">
+            Click on the three dots <code>⋮</code> → <code>Settings</code> → <code>Privacy and Security</code> → <code>Site Settings</code> → <code>JavaScript</code> → Enable <code>Sites can use JavaScript</code>.
+          </span>
+        </div>
+
+        <div class="step">
+          <span class="step-num">FIREFOX</span>
+          <span class="step-text">
+            Type `<code>about:config</code>` in the address bar → search for `<code>javascript.enabled</code>` → double-click to set it to `<code>true</code>`.
+          </span>
+        </div>
+
+        <div class="step">
+          <span class="step-num">EDGE</span>
+          <span class="step-text">
+            Click on the three dots <code>…</code> → <code>Settings</code> → <code>Cookies and Site Permissions</code> → <code>JavaScript</code> → Enable the option.
+          </span>
+        </div>
+
+        <div class="step">
+          <span class="step-num">SAFARI</span>
+          <span class="step-text">
+            In the <code>Safari</code> menu → <code>Preferences</code> → <code>Security</code> tab → check <code>Enable JavaScript</code>.
+          </span>
+        </div>
+
+      </div>
+
+      <p style="margin-top:6px; font-size:0.8rem; color:var(--text);">
+        After activating, reload the page with <code>F5</code> or <code>Ctrl + R</code>.
+      </p>
+    </div>
+  </div>
+
+  <div class="or-row"><span>OU</span></div>
+
+  <!-- CARD 2: Link externo -->
+  <div class="card">
+    <div class="card-header">
+      <div class="badge">02</div>
+      <span class="card-title">Would you prefer a complete guide?</span>
+    </div>
+    <div class="card-body">
+      <p>
+        The <strong style="color:#fff;">Enable JavaScript</strong> website is dedicated exclusively to teaching you how to enable JavaScript in any browser or device, with up-to-date step-by-step visual instructions.
+      </p>
+      <a class="btn" href="https://www.enable-javascript.com/pt/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        Access enable-javascript.com
+      </a>
+    </div>
+  </div>
+
+</div>
+</noscript>
 
 <div class="grid" id="grid"></div>
 
