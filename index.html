@@ -65,6 +65,16 @@
     margin-top: 10px;
     font-weight: 400;
   }
+  
+  header h3 {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.70rem;
+    letter-spacing: 0.2em;
+    color: #ccc;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-weight: 400;
+  }
 
   .divider {
     display: flex;
@@ -204,6 +214,8 @@
     letter-spacing: 0.02em;
   }
   a.mod-name:hover { color: var(--link); text-decoration: underline; }
+  footer a.mod-name { text-decoration: underline; }
+  footer a.mod-name:hover { color: #f00; text-decoration: underline; }
 
   span.mod-name {
     font-size: 0.95rem;
@@ -215,7 +227,7 @@
   .mod-desc {
     font-size: 0.73rem;
     font-weight: 400;
-    color: #5a607c;
+    color: #7a8a9e;
     padding-left: 12px;
     line-height: 1.45;
   }
@@ -248,7 +260,7 @@
     text-align: center;
     margin-top: 64px;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 0.62rem;
+    font-size: 1rem;
     color: var(--muted);
     letter-spacing: 0.2em;
   }
@@ -262,28 +274,44 @@
   <h1>The Walking <span>Dead</span> Experience</h1>
   <div class="divider"><span class="divider-icon">☠</span></div>
   <h2>Mod List</h2>
+  <h3>* Mods with the tag EFTX are included in EFTX pack *</h3>
 </header>
 
 <div class="grid" id="grid"></div>
 
-<footer><span>☠</span> &nbsp; The Walking Dead Experience Modpack &nbsp; <span>☠</span></footer>
+<footer>
+	<span>☠</span> &nbsp; The Walking Dead Experience Modpack &nbsp; <span>☠</span>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<span>☠</span> &nbsp; <a class="mod-name" href="https://www.reddit.com/r/7daystodie/comments/1r67zzd/the_walking_dead_experience_or_almost/" target="_blank" rel="noopener">See the post on Reddit here</a> &nbsp; <span>☠</span>
+</footer>
 
 <script>
 const sections = [
+	{
+    letter: 'A',
+    mods: [
+	  { name: 'AndreyWar 87 - Compatibility Modifications', url: 'https://github.com/andreydjason/7DTD-ModsChangedForCompatibilityWithEFTX', desc: 'Modifications to some mods (mainly loot) to work togheter' },
+      { name: 'Allow Combo Keys', url: null, tags: ['eftx'], desc: 'Enables combined key bindings for EFT weapon action modes.' }
+	  
+    ]
+  },
   {
     letter: 'B',
     mods: [
       { name: "Bdub's Vehicles", url: 'https://www.nexusmods.com/7daystodie/mods/342', desc: 'Large collection of new vehicles, including A21 versions of vanilla vehicles. Includes a custom mechanic trader.' },
       { name: 'Better Loot', url: 'https://www.nexusmods.com/7daystodie/mods/3872', desc: 'Improves vanilla loot spawns for a more rewarding experience.' },
       { name: 'Beyond Storage 2', url: 'https://www.nexusmods.com/7daystodie/mods/7809', desc: 'Use resources from nearby vehicles, drones, crates and workstations for crafting, repairing, refuelling and more.' },
-      { name: 'Bigger Backpack — 120 Slot (15x8)', url: null, desc: 'Expands the backpack to 120 slots. Multiple slot options available to choose from.' },
+      { name: 'Bigger Backpack — 120 Slot (15x8)', url: 'https://www.nexusmods.com/7daystodie/mods/7741', desc: 'Expands the backpack to 120 slots. Multiple slot options available to choose from.' },
     ]
   },
   {
     letter: 'C',
     mods: [
-      { name: 'Chest Pickup', url: null, desc: 'Allows picking up placed storage containers.' },
-      { name: 'Crouching Doesn\'t Make The Screen Dark', url: null, desc: 'Removes the screen darkening effect when crouching.' },
+      { name: 'Chest Pickup', url: 'https://www.curseforge.com/sdtd/mods/pickup-containers', desc: 'Allows picking up placed storage containers.' },
+      { name: 'Crouching Doesn\'t Make The Screen Dark', url: 'https://www.nexusmods.com/7daystodie/mods/5464', desc: 'Removes the screen darkening effect when crouching.' },
       { name: 'Custom FPV Fov', url: null, tags: ['eftx'], desc: 'Custom first-person field of view settings for EFT weapons.' },
       { name: 'Custom Muzzle Flash', url: null, tags: ['eftx'], desc: 'Replaces vanilla muzzle flash effects with EFT-style visuals.' },
       { name: 'Custom Particle Loader', url: null, tags: ['eftx'], desc: 'Core library for loading the custom particle effects used by EFTX weapons.' },
@@ -293,21 +321,21 @@ const sections = [
   {
     letter: 'D',
     mods: [
+	  { name: '1x1 Dew Collectors', url: 'https://www.nexusmods.com/7daystodie/mods/5645', desc: 'Smaller 1x1 footprint dew collectors for more flexible and compact base building.' },
       { name: 'Damage Numbers 1.9', url: 'https://www.nexusmods.com/7daystodie/mods/7548', desc: 'Floating damage numbers with animations for headshots, fire, bleed and shotguns. Real-time DPS HUD with full in-game customization.' },
-      { name: 'Dot Crosshair', url: null, desc: 'Replaces the default crosshair with a minimal dot.' },
+      { name: 'Dot Crosshair', url: 'https://www.nexusmods.com/7daystodie/mods/5640', desc: 'Replaces the default crosshair with a minimal dot.' },
     ]
   },
   {
     letter: 'E',
     mods: [
       { name: 'EFTX Extraction V2 — Full Pack', url: 'https://www.nexusmods.com/7daystodie/mods/7819', tags: ['core'], desc: 'Escape from Tarkov weapons, ammo, attachments, injectables and first aid ported into 7DTD. Standalone mod — do not combine with the EFT Overhaul.' },
-      { name: 'EFTX — Pack Standard', url: 'https://www.nexusmods.com/7daystodie/mods/7819', tags: ['eftx'], desc: 'Standard tier weapon set and content for the EFTX pack.' },
-      { name: 'EFTX — EFT Only Ammo', url: 'https://www.nexusmods.com/7daystodie/mods/7819', tags: ['eftx'], desc: 'Optional file — replaces all lootable ammo with EFT ammo exclusively.' },
-      { name: 'EFTX — No Vanilla Ammo', url: 'https://www.nexusmods.com/7daystodie/mods/7819', tags: ['eftx'], desc: 'Optional file — removes vanilla ammo from loot tables.' },
-      { name: 'EFTX — No Vanilla Guns', url: 'https://www.nexusmods.com/7daystodie/mods/7819', tags: ['eftx'], desc: 'Optional file — removes vanilla guns from loot tables.' },
-      { name: 'EFTX — Recoil Patch', url: 'https://www.nexusmods.com/7daystodie/mods/7819', tags: ['eftx'], desc: 'Recoil overhaul tuned specifically for EFTX weapons.' },
-      { name: 'EFTX — Random Height Walk Zombies', url: 'https://www.nexusmods.com/7daystodie/mods/7819', tags: ['eftx'], desc: 'Randomizes zombie walk-cycle heights for visual variety. Still being height-tuned.' },
-      { name: 'Allow Combo Keys', url: null, tags: ['eftx'], desc: 'Enables combined key bindings for EFT weapon action modes.' },
+      { name: 'EFTX — Pack Standard', url: 'https://www.nexusmods.com/7daystodie/mods/7819', desc: 'Standard tier weapon set and content for the EFTX pack.' },
+      { name: 'EFTX — EFT Only Ammo', url: 'https://www.nexusmods.com/7daystodie/mods/7819', desc: 'Optional file — replaces all lootable ammo with EFT ammo exclusively.' },
+      { name: 'EFTX — No Vanilla Ammo', url: 'https://www.nexusmods.com/7daystodie/mods/7819', desc: 'Optional file — removes vanilla ammo from loot tables.' },
+      { name: 'EFTX — No Vanilla Guns', url: 'https://www.nexusmods.com/7daystodie/mods/7819', desc: 'Optional file — removes vanilla guns from loot tables.' },
+      { name: 'EFTX — Recoil Patch', url: 'https://www.nexusmods.com/7daystodie/mods/7819', desc: 'Recoil overhaul tuned specifically for EFTX weapons.' },
+      { name: 'EFTX — Random Height Walk Zombies', url: 'https://www.nexusmods.com/7daystodie/mods/7819', desc: 'Randomizes zombie walk-cycle heights for visual variety.' }
     ]
   },
   {
@@ -322,20 +350,20 @@ const sections = [
   {
     letter: 'G',
     mods: [
-      { name: 'Glass Jar Return Fix', url: null, desc: 'Returns empty glass jars when consuming solid foods — fixes a critical vanilla oversight with the jar economy.' },
+      { name: 'Glass Jar Return Fix', url: 'https://www.nexusmods.com/7daystodie/mods/9353', desc: 'Returns empty glass jars when consuming solid foods — fixes a critical vanilla oversight with the jar economy.' },
     ]
   },
   {
     letter: 'H',
     mods: [
-      { name: 'Horn Opens Doors', url: null, desc: 'Vehicle horn opens trigger-automated doors; all other doors remain locked.' },
+      { name: 'Horn Opens Doors', url: 'https://www.nexusmods.com/7daystodie/mods/5902', desc: 'Vehicle horn opens trigger-automated doors; all other doors remain locked.' },
     ]
   },
   {
     letter: 'I',
     mods: [
-      { name: 'Immersive Tool Belt', url: null, desc: 'Enhances the tool belt layout and interaction feel.' },
-      { name: 'Infinite Durability', url: null, desc: 'Items no longer degrade or break over time.' },
+      { name: 'Immersive Tool Belt', url: 'https://www.nexusmods.com/7daystodie/mods/5649', desc: 'Enhances the tool belt layout and interaction feel.' },
+      { name: 'Infinite Durability', url: 'https://www.nexusmods.com/7daystodie/mods/875', desc: 'Items no longer degrade or break over time (configurable).' },
     ]
   },
   {
@@ -343,15 +371,15 @@ const sections = [
     mods: [
       { name: 'Keep Reloading', url: null, tags: ['eftx'], desc: 'Automatically continues reloading without player input interruptions.' },
       { name: 'KF Common Utility Lib', url: null, tags: ['eftx'], desc: 'Core utility library required by EFTX weapon systems.' },
-      { name: 'KHV2 Zombie Reach Adjust', url: null, desc: 'Adjusts zombie melee reach range for better balance and fairness.' },
+      { name: 'KHV2 Zombie Reach Adjust', url: 'https://www.nexusmods.com/7daystodie/mods/5109', desc: 'Adjusts zombie melee reach range for better balance and fairness.' },
     ]
   },
   {
     letter: 'M',
     mods: [
-      { name: 'Max Loot Stage Everywhere', url: null, desc: 'Forces maximum loot stage across all biomes and zones. Still being tested.' },
-      { name: 'More Gore Continued', url: null, desc: 'Enhanced blood effects and dismemberment for a more visceral experience.' },
-      { name: 'Multi-Quest', url: null, desc: 'Allows accepting and tracking multiple trader quests simultaneously.' },
+      { name: 'Max Loot Stage Everywhere', url: 'https://7daystodiemods.com/max-loot-stage-everywhere/', desc: 'Forces maximum loot stage across all biomes and zones. Still being tested.' },
+      { name: 'More Gore Continued', url: 'https://www.nexusmods.com/7daystodie/mods/9577', desc: 'Enhanced blood effects and dismemberment for a more visceral experience.' },
+      { name: 'Multi-Quest', url: 'https://drive.google.com/file/d/14dYLtRZCBeKPP8_xzk2yW574JEQu4jOv/view', desc: 'Allows accepting and tracking multiple trader quests simultaneously.' },
     ]
   },
   {
@@ -371,14 +399,14 @@ const sections = [
   {
     letter: 'P',
     mods: [
-      { name: 'Perfect Accurate — No Crosshair', url: null, desc: 'Hides the crosshair when aiming down sights for a cleaner, more immersive look.' },
-      { name: 'PewPew Learn by Doing', url: null, desc: 'Books still needed, but you also gain XP and level up weapon skills just by using them. By Mickkpewpew.' },
+      { name: 'Perfect Accurate — No Crosshair', url: 'https://www.nexusmods.com/7daystodie/mods/5629', desc: 'Hides the crosshair when aiming down sights for a cleaner, more immersive look.' },
+      { name: 'PewPew Learn by Doing', url: 'https://7daystodiemods.com/mickkpewpews-learn-by-doing/', desc: 'Books still needed, but you also gain XP and level up weapon skills just by using them. By Mickkpewpew.' },
     ]
   },
   {
     letter: 'Q',
     mods: [
-      { name: 'Quality of Life Improvements', url: null, desc: 'Customized QoL bundle from the Bigger Backpack mod author.' },
+      { name: 'Quality of Life Improvements', url: 'https://drive.google.com/file/d/1M4kYTsLZ5f7jQOwEn9BBiHw9PLZdB_ae/view?usp=drive_link', desc: 'Customized QoL bundle from the Bigger Backpack mod author.' },
       { name: 'Quartz', url: 'https://www.nexusmods.com/7daystodie/mods/2409', tags: ['core'], desc: 'UI modding framework adding new XUi Widgets and Controllers. Required by many UI-heavy mods and EFTX.' },
       { name: 'Quick Stack', url: 'https://www.nexusmods.com/7daystodie/mods/1357', desc: 'Instantly deposits matching items from your inventory into all nearby containers within a 7-block radius.' },
     ]
@@ -386,21 +414,21 @@ const sections = [
   {
     letter: 'R',
     mods: [
-      { name: 'Ramos Trader Quest Preview', url: null, desc: 'Shows a preview of quest rewards before accepting them from a trader.' },
-      { name: 'Reduced Zombie HP', url: null, desc: 'Lowers zombie health values for a faster, more realistic feel.' },
-      { name: 'Remove Intro To Buried Supplies', url: null, desc: 'Skips the introductory buried supplies quest.' },
-      { name: 'RW CZDM — Customizable Zombie Damage', url: null, desc: 'Customizable damage multipliers for zombie head and body hits — used to achieve a Walking Dead-style lethality.' },
+      { name: 'Ramos Trader Quest Preview', url: 'https://www.nexusmods.com/7daystodie/mods/7560', desc: 'Shows a preview of quest rewards before accepting them from a trader.' },
+      { name: 'Reduced Zombie HP', url: 'https://www.nexusmods.com/7daystodie/mods/619', desc: 'Lowers zombie health values for a faster, more realistic feel.' },
+      { name: 'Remove Intro To Buried Supplies', url: 'https://www.nexusmods.com/7daystodie/mods/6506', desc: 'Skips the introductory buried supplies quest.' },
+      { name: 'RW CZDM — Customizable Zombie Damage', url: 'https://7daystodiemods.com/customizable-zombie-damage-multiplier-czdm/', desc: 'Customizable damage multipliers for zombie head and body hits — used to achieve a Walking Dead-style lethality.' },
     ]
   },
   {
     letter: 'S',
     mods: [
       { name: 'SCore', url: 'https://www.nexusmods.com/7daystodie/mods/6176', tags: ['core'], desc: 'Core modding library by SphereII. Provides new item actions, blocks, challenges and more. Required by many mods.' },
-      { name: 'SCore Changes — Gears Edition', url: null, desc: 'Enables specific SCore features integrated with the Gears settings manager.' },
-      { name: 'Scomar82 Hobacs', url: null, desc: 'Highlights buttons and container states for better visual clarity.' },
+      { name: 'SCore Changes — Gears Edition', url: 'https://www.nexusmods.com/7daystodie/mods/7228', desc: 'Enables specific SCore features integrated with the Gears settings manager.' },
+      { name: 'Scomar82 Custom Colors', url: 'https://www.nexusmods.com/7daystodie/mods/5037', desc: 'Highlights buttons and container states for better visual clarity.' },
       { name: 'Sensible Lootz', url: 'https://www.nexusmods.com/7daystodie/mods/6774', desc: 'Fixes illogical loot placements. Grills contain grills, weapon bags contain weapons, and looted bags no longer vanish.' },
       { name: 'Show Weapon Sights In Third Person', url: 'https://github.com/andreydjason/7DTD-ShowWeaponSightsInThirdPersonView/', desc: 'Allows proper ADS in third-person view. Custom mod created by AndreyWar87. Source available on GitHub.' },
-      { name: 'Skip News Screen', url: null, desc: 'Skips the news splash screen at game launch.' },
+      { name: 'Skip News Screen', url: 'https://www.nexusmods.com/7daystodie/mods/5520', desc: 'Skips the news splash screen at game launch.' },
     ]
   },
   {
@@ -417,29 +445,23 @@ const sections = [
   {
     letter: 'U',
     mods: [
-      { name: 'Unlock Open Doors', url: null, desc: 'Lets you open and close trigger-automated doors. Non-automated doors remain locked as normal.' },
+      { name: 'Unlock Open Doors', url: 'https://www.nexusmods.com/7daystodie/mods/1832', desc: 'Lets you open and close trigger-automated doors. Non-automated doors remain locked as normal.' },
     ]
   },
   {
     letter: 'V',
     mods: [
-      { name: 'Vanilla Food Model 2.5', url: null, desc: 'Restores vanilla 3D models for food items.' },
-      { name: 'Vanilla Jar Fix', url: null, desc: 'Fixes glass jar-related issues in vanilla.' },
-      { name: 'Vehicle Camera (Wito\'s)', url: null, desc: 'Adds a first-person view camera for vehicles.' },
+      { name: 'Vanilla Food Model 2.5', url: 'https://7daystodiemods.com/vanilla-food-model-2-5/', desc: 'Restores vanilla 3D models for food items.' },
+      { name: 'Vanilla Jar Fix', url: 'https://www.nexusmods.com/7daystodie/mods/9353', desc: '"Glass Jar Return Fix"' },
+      { name: 'Vehicle Camera (Wito\'s)', url: 'https://www.nexusmods.com/7daystodie/mods/7015', desc: 'Adds a first-person view camera for vehicles.' },
     ]
   },
   {
     letter: 'W',
     mods: [
-      { name: 'WMM Armour Quick Swap', url: null, desc: 'Allows quick-swapping between saved armour loadouts.' },
+      { name: 'WMM Armour Quick Swap', url: 'https://www.nexusmods.com/7daystodie/mods/5737', desc: 'Allows quick-swapping between saved armour loadouts.' },
     ]
-  },
-  {
-    letter: 'X',
-    mods: [
-      { name: '1x1 Dew Collectors', url: null, desc: 'Smaller 1x1 footprint dew collectors for more flexible and compact base building.' },
-    ]
-  },
+  }
 ];
 
 const grid = document.getElementById('grid');
